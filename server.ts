@@ -4,9 +4,8 @@ import { createServer as createViteServer } from 'vite';
 import { GoogleGenAI, Type } from '@google/genai';
 import dotenv from 'dotenv';
 import multer from 'multer';
-import { createRequire } from 'module';
-const require = createRequire(import.meta.url);
-const pdfParse = require('pdf-parse');
+import * as pdfParseModule from 'pdf-parse';
+const pdfParse = ((pdfParseModule as any).default || pdfParseModule) as any;
 
 dotenv.config();
 
