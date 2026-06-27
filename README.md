@@ -33,7 +33,7 @@
 | PDF Export | jsPDF |
 | Excel Export | SheetJS (`xlsx`) |
 | Icons | Lucide React |
-| SMS (optional) | Twilio |
+| WHATSAPP (Coming Soon ) | ----- |
 
 ---
 
@@ -86,7 +86,7 @@
 ### Prerequisites
 
 - **Node.js** v18 or later
-- A **Google Gemini API key** (get one at [aistudio.google.com](https://aistudio.google.com))
+- A **Google Gemini API key** 
 
 ### Installation
 
@@ -145,6 +145,7 @@ Both endpoints are defined in `server.ts` and include automatic retry with expon
 
 ---
 
-## License
+## BUILT BY
+- Srikakulam Venkat Pranav Guptha
+- Naidu Reshmanth Sai
 
-This project was originally scaffolded via Google AI Studio. See `.gitignore` and `metadata.json` for project metadata.
