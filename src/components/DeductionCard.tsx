@@ -1258,31 +1258,31 @@ export default function DeductionCard() {
             <div className="bg-white border border-slate-200 rounded-xl p-4.5 shadow-3xs space-y-4">
               <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider">Interactive New Regime Shelters</h4>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4.5">
+              <div className="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-3 gap-4.5">
                 {/* Lever 1: 80CCD(2) Employer NPS */}
                 <div className="bg-blue-50/20 border border-blue-100 rounded-xl p-3.5 space-y-2.5 flex flex-col justify-between">
-                  <div>
-                    <div className="flex justify-between items-start gap-2">
-                      <div className="flex-1 min-w-0">
+                  <div className="space-y-2">
+                    <div className="space-y-1">
+                      <div className="min-w-0">
                         <h5 className="text-[11px] font-bold text-slate-700 uppercase tracking-wide flex flex-wrap items-center gap-1">
                           Employer NPS (80CCD(2))
                           <ParamInfo text="Company contribution to your National Pension System account. Allowed up to 14% of basic salary." />
                         </h5>
                         <p className="text-[9px] text-slate-400 mt-0.5 font-medium">Corporate retirement benefit match</p>
                       </div>
-                      <div className="relative shrink-0 w-24">
+                      <div className="relative w-full mt-1.5">
                         <span className="absolute left-1.5 top-0.5 text-slate-400 text-[10px] font-bold">₹</span>
                         <input
                           type="text"
                           value={val80CCD2 ? val80CCD2.toLocaleString('en-IN') : ''}
                           onChange={(e) => handleTextInputChange('80CCD(2)', maxPotentialNPS || 150000, e.target.value)}
                           placeholder="0"
-                          className="w-full pl-4 pr-1 py-0.5 bg-white border border-slate-200 rounded text-[10px] font-mono font-bold text-right text-slate-800 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                          className="w-full pl-4 pr-2 py-0.5 bg-white border border-slate-200 rounded text-[10px] font-mono font-bold text-right text-slate-800 focus:outline-none focus:ring-1 focus:ring-blue-500"
                         />
                       </div>
                     </div>
 
-                    <div className="space-y-1.5 mt-2 bg-white p-2 rounded-lg border border-slate-200/50">
+                    <div className="space-y-1.5 bg-white p-2 rounded-lg border border-slate-200/50">
                       <input
                         type="range"
                         min="0"
@@ -1294,7 +1294,7 @@ export default function DeductionCard() {
                       />
                       <div className="flex justify-between text-[8px] text-slate-400 font-mono font-semibold">
                         <span>₹0</span>
-                        <span>Max 14% of Basic ({formatINR(maxPotentialNPS)})</span>
+                        <span>Max 14% ({formatINR(maxPotentialNPS)})</span>
                       </div>
                     </div>
                   </div>
@@ -1319,28 +1319,28 @@ export default function DeductionCard() {
 
                 {/* Lever 2: 80CCH Agnipath Corpus Fund */}
                 <div className="bg-violet-50/20 border border-violet-100 rounded-xl p-3.5 space-y-2.5 flex flex-col justify-between">
-                  <div>
-                    <div className="flex justify-between items-start gap-2">
-                      <div className="flex-1 min-w-0">
+                  <div className="space-y-2">
+                    <div className="space-y-1">
+                      <div className="min-w-0">
                         <h5 className="text-[11px] font-bold text-slate-700 uppercase tracking-wide flex flex-wrap items-center gap-1">
                           Agnipath Scheme (80CCH)
                           <ParamInfo text="Government-matching Agnipath scheme contribution for Agniveers. Fully tax-deductible in the New Regime." />
                         </h5>
                         <p className="text-[9px] text-slate-400 mt-0.5 font-medium">Agniveer Corpus Fund shelter</p>
                       </div>
-                      <div className="relative shrink-0 w-24">
+                      <div className="relative w-full mt-1.5">
                         <span className="absolute left-1.5 top-0.5 text-slate-400 text-[10px] font-bold">₹</span>
                         <input
                           type="text"
                           value={val80CCH ? val80CCH.toLocaleString('en-IN') : ''}
                           onChange={(e) => handleTextInputChange('80CCH', LIMIT_80CCH, e.target.value)}
                           placeholder="0"
-                          className="w-full pl-4 pr-1 py-0.5 bg-white border border-slate-200 rounded text-[10px] font-mono font-bold text-right text-slate-800 focus:outline-none focus:ring-1 focus:ring-violet-500"
+                          className="w-full pl-4 pr-2 py-0.5 bg-white border border-slate-200 rounded text-[10px] font-mono font-bold text-right text-slate-800 focus:outline-none focus:ring-1 focus:ring-violet-500"
                         />
                       </div>
                     </div>
 
-                    <div className="space-y-1.5 mt-2 bg-white p-2 rounded-lg border border-violet-200/50">
+                    <div className="space-y-1.5 bg-white p-2 rounded-lg border border-violet-200/50">
                       <input
                         type="range"
                         min="0"
@@ -1377,28 +1377,28 @@ export default function DeductionCard() {
 
                 {/* Lever 3: section24bLetOut Home Loan Interest Let-out */}
                 <div className="bg-emerald-50/20 border border-emerald-100 rounded-xl p-3.5 space-y-2.5 flex flex-col justify-between">
-                  <div>
-                    <div className="flex justify-between items-start gap-2">
-                      <div className="flex-1 min-w-0">
+                  <div className="space-y-2">
+                    <div className="space-y-1">
+                      <div className="min-w-0">
                         <h5 className="text-[11px] font-bold text-slate-700 uppercase tracking-wide flex flex-wrap items-center gap-1">
                           Let-Out Property (Sec 24b)
                           <ParamInfo text="Interest on home loan for Let-Out properties. Self-occupied home loan interest is disallowed in New Regime, but Let-Out property interest is 100% tax-deductible." />
                         </h5>
                         <p className="text-[9px] text-slate-400 mt-0.5 font-medium">Rental property interest deductions</p>
                       </div>
-                      <div className="relative shrink-0 w-24">
+                      <div className="relative w-full mt-1.5">
                         <span className="absolute left-1.5 top-0.5 text-slate-400 text-[10px] font-bold">₹</span>
                         <input
                           type="text"
                           value={valSection24bLetOut ? valSection24bLetOut.toLocaleString('en-IN') : ''}
                           onChange={(e) => handleTextInputChange('section24bLetOut', LIMIT_24B_LETOUT, e.target.value)}
                           placeholder="0"
-                          className="w-full pl-4 pr-1 py-0.5 bg-white border border-slate-200 rounded text-[10px] font-mono font-bold text-right text-slate-800 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                          className="w-full pl-4 pr-2 py-0.5 bg-white border border-slate-200 rounded text-[10px] font-mono font-bold text-right text-slate-800 focus:outline-none focus:ring-1 focus:ring-emerald-500"
                         />
                       </div>
                     </div>
 
-                    <div className="space-y-1.5 mt-2 bg-white p-2 rounded-lg border border-emerald-200/50">
+                    <div className="space-y-1.5 bg-white p-2 rounded-lg border border-emerald-200/50">
                       <input
                         type="range"
                         min="0"
@@ -1442,7 +1442,7 @@ export default function DeductionCard() {
       <div className="border-t border-slate-100 pt-3 mt-4 flex items-center justify-between text-[10px] text-slate-400 font-semibold uppercase tracking-wider">
         <span>Filing Year: FY 2025-26</span>
         <a 
-          href="https://www.incometax.gov.in/iec/foportal/help/individual/tax-slabs" 
+          href="https://www.incometax.gov.in/iec/foportal/help/individual/income-tax-slabs" 
           target="_blank" 
           rel="noopener noreferrer" 
           className="flex items-center gap-0.5 text-blue-600 hover:underline cursor-pointer lowercase normal-case tracking-normal"
